@@ -1,0 +1,16 @@
+package com.xlq.service.imp;
+
+import com.xlq.dao.productDao;
+import com.xlq.model.product;
+import com.xlq.service.ProductService;
+
+public class ProductServiceImp implements ProductService{
+
+	productDao productDao=null;
+	@Override
+	public product selectById(Long productId) throws Exception {
+		// TODO Auto-generated method stub
+		return productDao.selectById(productId);
+	}
+	
+}

@@ -1,0 +1,23 @@
+package com.xlq.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.xlq.model.product;
+
+public interface productDao {
+    int deleteByPrimaryKey(Integer productId);
+
+    int insert(product record);
+
+    int insertSelective(product record);
+
+    product selectByPrimaryKey(Integer productId);
+
+    int updateByPrimaryKeySelective(product record);
+
+    int updateByPrimaryKey(product record);
+    
+    List<product> selectAll(@Param("productId")String productId);
+}

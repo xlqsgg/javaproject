@@ -1,0 +1,12 @@
+package com.xlq.service;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.xlq.model.product;
+
+public interface productService {
+	List<product> selectAll(@Param("productId")String productId);
+	
+}

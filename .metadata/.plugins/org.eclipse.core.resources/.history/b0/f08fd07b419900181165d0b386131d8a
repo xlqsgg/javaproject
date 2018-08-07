@@ -1,0 +1,17 @@
+package com.xlq.dao;
+
+import com.xlq.model.product;
+
+public interface productMapper {
+    int deleteByPrimaryKey(Integer productId);
+
+    int insert(product record);
+
+    int insertSelective(product record);
+
+    product selectByPrimaryKey(Integer productId);
+
+    int updateByPrimaryKeySelective(product record);
+
+    int updateByPrimaryKey(product record);
+}

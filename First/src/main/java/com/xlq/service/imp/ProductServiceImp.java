@@ -1,0 +1,49 @@
+package com.xlq.service.imp;
+
+import org.springframework.stereotype.Service;
+
+import com.xlq.dao.productDao;
+import com.xlq.model.product;
+import com.xlq.service.ProductService;
+
+@Service("ProductService")
+public class ProductServiceImp implements ProductService{
+
+	productDao productDao=null;
+	@Override
+	public product selectById(Integer productId) throws Exception {
+		// TODO Auto-generated method stub
+		return productDao.selectById(productId);
+	}
+	@Override
+	public int deleteByPrimaryKey(Integer productId) {
+		// TODO Auto-generated method stub
+		return productDao.deleteByPrimaryKey(productId);
+	}
+	@Override
+	public int insert(product record) {
+		// TODO Auto-generated method stub
+		return productDao.insert(record);
+	}
+	@Override
+	public int insertSelective(product record) {
+		// TODO Auto-generated method stub
+		return productDao.insertSelective(record);
+	}
+	@Override
+	public product selectByPrimaryKey(Integer productId) {
+		// TODO Auto-generated method stub
+		return productDao.selectByPrimaryKey(productId);
+	}
+	@Override
+	public int updateByPrimaryKeySelective(product record) {
+		// TODO Auto-generated method stub
+		return productDao.updateByPrimaryKeySelective(record);
+	}
+	@Override
+	public int updateByPrimaryKey(product record) {
+		// TODO Auto-generated method stub
+		return productDao.updateByPrimaryKeySelective(record);
+	}
+	
+}

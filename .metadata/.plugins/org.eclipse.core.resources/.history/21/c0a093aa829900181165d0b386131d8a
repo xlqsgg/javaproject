@@ -1,0 +1,22 @@
+package com.xlq.service.imp;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.xlq.dao.productDao;
+import com.xlq.model.product;
+import com.xlq.service.ProductService;
+
+
+public class ProductServiceImp implements ProductService{
+	
+	private productDao productdao=null;
+	
+	@Override
+	public List<product> selectAll(){
+		// TODO Auto-generated method stub
+		return productdao.selectAll();
+	}
+	
+}

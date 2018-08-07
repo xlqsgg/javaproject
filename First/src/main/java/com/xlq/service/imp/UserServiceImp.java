@@ -1,0 +1,73 @@
+package com.xlq.service.imp;
+
+import javax.annotation.Resource;
+import org.springframework.stereotype.Service;
+
+import com.xlq.dao.productDao;
+import com.xlq.dao.userDao;
+import com.xlq.model.user;
+import com.xlq.service.UserService;
+
+@Service("UserService")
+public class UserServiceImp implements UserService{
+
+    @Resource
+    private userDao userDao = null;
+    
+	@Override
+	public int deleteByPrimaryKey(Long userid) {
+		// TODO Auto-generated method stub
+		return userDao.deleteByPrimaryKey(userid);
+	}
+
+	@Override
+	public int insert(user record) {
+		// TODO Auto-generated method stub
+		return userDao.insert(record);
+	}
+
+	@Override
+	public int insertSelective(user record) {
+		// TODO Auto-generated method stub
+		return userDao.insertSelective(record);
+	}
+
+	@Override
+	public user selectByPrimaryKey(Long userid) {
+		// TODO Auto-generated method stub
+		return userDao.selectByPrimaryKey(userid);
+	}
+
+	@Override
+	public int updateByPrimaryKeySelective(user record) {
+		// TODO Auto-generated method stub
+		return userDao.updateByPrimaryKey(record);
+	}
+
+	@Override
+	public int updateByPrimaryKey(user record) {
+		// TODO Auto-generated method stub
+		return userDao.updateByPrimaryKey(record);
+	}
+
+
+	@Override
+	public user selectUser(user user) {
+		// TODO Auto-generated method stub
+		return userDao.selectUser(user);
+	}
+	
+	@Override
+	public boolean login(user user) {
+		return userDao.selectUser(user)==null?false:true;
+	}
+
+	@Override
+	public user findByName(String username,String password) throws Exception {
+		// TODO Auto-generated method stub
+		return userDao.findByName(username,password);
+	}
+
+
+
+}

@@ -1,0 +1,17 @@
+package com.xlq.service.imp;
+
+import org.springframework.stereotype.Service;
+
+import com.xlq.model.product;
+import com.xlq.service.productService;
+
+@Service("ProductService")
+public class productServiceImp implements productService{
+
+	@Override
+	public product selectAll() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
